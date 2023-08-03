@@ -26,6 +26,7 @@ class ProcessEmail extends Command
     public function handle()
     {
         ini_set('memory_limit', '256M'); // Set memory limit to 256 MB
+        ini_set('max_execution_time', 0); // Set max execution time to unlimited
 
         // Assume the file path is relative to the Laravel project's root
         $filePath = public_path('data/sample.txt');
